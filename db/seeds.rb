@@ -6,8 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Cocktail.create!(name: "Mint Julep")
-Cocktail.create!(name: "Whiskey Sour")
-Cocktail.create!(name: "Mojito")
-
 # rails db:seed
+
+require 'open-uri'
+
+Ingredient.destroy_all
+
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+user_serialized = open(url).read
+ingredients = JSON.parse(user_serialized)
+
+ingredients["drinks"].each do |ingredient|
+  i = Ingredient.create(name: ingredient["strIngredient1"])
+  # puts "create #{i.name}"
+end
+
