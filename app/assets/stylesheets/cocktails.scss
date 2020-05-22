@@ -66,11 +66,19 @@ h2 {
     height: 0;
     width: 28%;
     margin: 25px;
+
+  @media only screen and (max-width: #{$medium}) {
+     width: 43%;
+  }
 }
 
 .content {
   margin: 25px;
-  flex: 0 0 28%;
+  flex: 28%;
+
+    @media only screen and (max-width: #{$medium}) {
+     flex: 43%;
+  }
 }
 
 .img {
