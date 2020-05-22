@@ -1,0 +1,65 @@
+// Place all the styles related to the chcktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$black: #293241;
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.btn {
+  color: #fff;
+  font-family: roboto;
+  text-decoration: none;
+  border: 1px solid $black;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: $black;
+  height: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px;
+}
+
+.emoji {
+  font-size: 22px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 25px;
+}
+
+.content {
+  margin: 25px;
+  flex: 1 1 28%;
+  position: relative;
+}
+
+.img {
+  max-width: 100%;
+}
+
+.context {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.card-link {
+  color: $black;
+  text-decoration: none;
+  font-family: roboto;
+}

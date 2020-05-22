@@ -1,0 +1,19 @@
+<div class="nav">
+  <p class="emoji">🍸</p>
+  <%= link_to "add a cocktail", new_cocktail_path, class: "btn" %>
+</div>
+<div class="container">
+  <% @cocktails.each do |cocktail| %>
+    <div class="content">
+      <!-- <div class="card" style="background-image: url('https://images.unsplash.com/photo-1566733971017-f6a46e832e95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80');"> -->
+        <%= image_tag 'https://images.unsplash.com/photo-1566733971017-f6a46e832e95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80', class:"img" %>
+        <div class="context">
+          <h2><%= cocktail.name %></h2>
+          <%= link_to "see more", cocktail_path(cocktail), class: 'card-link' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- style="background-image: url('<%= image_path 'https://images.unsplash.com/photo-1536599424071-0b215a388ba7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80' %>');" -->
