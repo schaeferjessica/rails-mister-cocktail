@@ -6,7 +6,7 @@
   <% @cocktails.each do |cocktail| %>
     <div class="content">
         <%#= image_tag 'https://images.unsplash.com/photo-1566733971017-f6a46e832e95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80', class:"img" %>
-        <% if @article.photo.attached? %>
+        <% if cocktail.photo.attached? %>
           <%= cl_image_tag cocktail.photo.key, class:"img" %>
         <% end %>
         <div class="context">
