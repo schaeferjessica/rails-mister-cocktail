@@ -11,7 +11,7 @@
         <% end %>
         <div class="context">
           <%= link_to cocktail.name, cocktail_path(cocktail), class: 'card-link' %>
-          <%= link_to "🗑", root_path(cocktail), method: :delete, data: { confirm: "Are you sure you want to remove the image?" } %>
+          <%= link_to "🗑", cocktail, method: :delete, data: { confirm: "Are you sure?" } %>
         </div>
       </div>
     <% end %>

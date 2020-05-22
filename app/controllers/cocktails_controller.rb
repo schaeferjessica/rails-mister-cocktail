@@ -1,12 +1,12 @@
 class CocktailsController < ApplicationController
-  before_action :set_pet, only: [ :show, :destroy ]
+  before_action :set_cocktail, only: [ :show, :destroy ]
 
   def index
     @cocktails = Cocktail.all
   end
 
   def show
-    @dose = Dose.new
+    #@dose = Dose.new
     #@review = Review.new
   end
 
@@ -24,13 +24,13 @@ class CocktailsController < ApplicationController
   end
 
   def destroy
-    @chocktail.destroy
-    redirect_to cocktail_path
+    @cocktail.destroy
+    redirect_to root_path
   end
 
   private
 
-  def set_pet
+  def set_cocktail
     @cocktail = Cocktail.find(params[:id])
   end
 
