@@ -100,3 +100,14 @@ label {
   align-items: center;
   margin-top: 20px;
 }
+
+.invalid-feedback {
+  font-size: 11px;
+  margin-left: 25px;
+  position: absolute;
+  top: 0;
+}
+
+.form-group {
+  position: relative;
+}
