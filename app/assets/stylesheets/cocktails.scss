@@ -32,7 +32,7 @@ h2 {
   font-family: roboto;
   text-decoration: none;
   border: 1px solid $black;
-  padding: 10px;
+  padding: 14px;
   border-radius: 4px;
   background-color: $black;
   height: 100%;
@@ -95,7 +95,7 @@ label {
 
 #new_cocktail {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
   align-items: center;
   margin-top: 20px;
