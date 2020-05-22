@@ -10,8 +10,8 @@
           <%= cl_image_tag cocktail.photo.key, class:"img" %>
         <% end %>
         <div class="context">
-          <h2><%= cocktail.name %></h2>
-          <%= link_to "see more", cocktail_path(cocktail), class: 'card-link' %>
+          <%= link_to cocktail.name, cocktail_path(cocktail), class: 'card-link' %>
+          <%= link_to "🗑", root_path(cocktail), method: :delete, data: { confirm: "Are you sure you want to remove the image?" } %>
         </div>
       </div>
     <% end %>

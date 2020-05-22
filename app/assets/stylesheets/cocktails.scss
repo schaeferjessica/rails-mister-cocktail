@@ -1,15 +1,30 @@
-// Place all the styles related to the chcktails controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
 
+//media
+$xsmall: 600px;
+$small: 767px;
+$medium: 992px;
+$large: 1024px;
+$xlarge: 1199px;
+$max-width: 1440px;
+
+//color
 $black: #293241;
+$font-stack: 'Roboto', sans-serif;
 
 html {
   box-sizing: border-box;
+  font-family: $font-stack;
 }
 
 body {
   margin: 0;
+}
+
+h2 {
+  font-weight: normal;
 }
 
 .btn {
@@ -39,13 +54,15 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 25px;
+
+    @media only screen and (max-width: #{$xsmall}) {
+     display: block;
+  }
 }
 
 .content {
   margin: 25px;
   flex: 1 1 28%;
-  position: relative;
 }
 
 .img {
@@ -53,13 +70,33 @@ body {
 }
 
 .context {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 10px 5px;
 }
 
 .card-link {
   color: $black;
   text-decoration: none;
   font-family: roboto;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 20px;
+}
+
+label {
+  display: none
+}
+
+#new_cocktail {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
 }
