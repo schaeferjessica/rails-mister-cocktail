@@ -60,9 +60,17 @@ h2 {
   }
 }
 
+.container::after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 28%;
+    margin: 25px;
+}
+
 .content {
   margin: 25px;
-  flex: 1 1 28%;
+  flex: 0 0 28%;
 }
 
 .img {
