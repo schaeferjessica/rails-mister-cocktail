@@ -14,8 +14,11 @@ $max-width: 1440px;
 $black: #293241;
 $font-stack: 'Roboto', sans-serif;
 
-html {
+* {
   box-sizing: border-box;
+}
+
+html {
   font-family: $font-stack;
 }
 
@@ -28,6 +31,8 @@ h2 {
 }
 
 .btn {
+  background: none;
+  border-radius: 0;
   color: #fff;
   font-family: roboto;
   text-decoration: none;
@@ -54,9 +59,11 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  margin: 50px 150px;
 
     @media only screen and (max-width: #{$xsmall}) {
      display: block;
+     margin: 50px;
   }
 }
 
@@ -67,7 +74,7 @@ h2 {
     width: 28%;
     margin: 25px;
 
-  @media only screen and (max-width: #{$medium}) {
+  @media only screen and (max-width: #{$small}) {
      width: 43%;
   }
 }
@@ -76,7 +83,7 @@ h2 {
   margin: 25px;
   flex: 28%;
 
-    @media only screen and (max-width: #{$medium}) {
+    @media only screen and (max-width: #{$small}) {
      flex: 43%;
   }
 }
@@ -98,23 +105,23 @@ h2 {
   font-family: roboto;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 input {
   border: 1px solid black;
   border-radius: 4px;
   padding: 15px;
-  margin: 20px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 label {
   display: none
-}
-
-#new_cocktail {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  margin-top: 20px;
 }
 
 .invalid-feedback {
