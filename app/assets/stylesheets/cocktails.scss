@@ -30,9 +30,14 @@ h2 {
   font-weight: normal;
 }
 
-.btn {
+
+button,
+input[type='submit'] {
   background: none;
   border-radius: 0;
+}
+
+.btn {
   color: #fff;
   font-family: roboto;
   text-decoration: none;
